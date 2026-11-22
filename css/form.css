@@ -1,0 +1,240 @@
+#contactForm {
+    display: flex;
+    flex-flow: column wrap;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(160deg, rgba(19, 11, 34, 0.94), rgba(12, 7, 22, 0.97));
+    padding: 35px;
+        border: 1px solid #a100ff47;;
+    border-radius: 0.5rem;
+}
+/* 
+#contactForm button {
+    background: rgba(161, 0, 255, 0.14);
+    padding: 5px;
+    border-radius: 13.6px;
+    background: linear-gradient(135deg, #6900db, #a100ff);
+} */
+
+#contactForm button {
+        
+    color: rgb(255, 255, 255);
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(135deg, rgb(105, 0, 219), rgb(161, 0, 255));
+    background-origin: padding-box;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-size: auto;
+    border-bottom-color:rgba(161, 0, 255, 0.7);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgba(161, 0, 255, 0.7);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgba(161, 0, 255, 0.7);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgba(161, 0, 255, 0.7);
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-shadow: rgba(161, 0, 255, 0.35) 0px 16px 44px 0px;
+    cursor: pointer;
+    -webkit-border-image: none;
+
+
+
+
+    align-items: center;
+    box-sizing: border-box;
+    display: inline-flex;
+    height: 49.7812px;
+    justify-content: center;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 20px;
+    min-height: 48px;
+    padding-bottom: 13.6px;
+    padding-left: 28.8px;
+    padding-right: 28.8px;
+    padding-top: 13.6px;
+    width: 100%;
+
+
+
+    /* color-scheme: light; */
+    appearance: button;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    border-bottom-left-radius: 13.6px;
+    border-bottom-right-radius: 13.6px;
+    border-top-left-radius: 13.6px;
+    border-top-right-radius: 13.6px;
+    column-gap: 9.6px;
+    opacity: 1;
+    padding-block-end: 13.6px;
+    padding-block-start: 13.6px;
+    padding-inline-end: 28.8px;
+    padding-inline-start: 28.8px;
+    row-gap: 9.6px;
+    scrollbar-color: oklch(0.999994 0.0000497986 none / 0.35) rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+}
+
+.neon-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 54px rgba(161, 0, 255, 0.55);
+    filter: brightness(1.08);
+}
+
+
+.form-label {
+    display: block;
+    text-align: start;
+    margin-bottom: 0.45rem;
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.kx-input {
+    width: 100%;
+    min-height: 3rem;
+    border: 1px solid rgba(161, 0, 255, 0.26);
+    border-radius: 0.7rem;
+    background: var(--field-bg);
+    padding: 0.65rem 0.9rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.kx-input::placeholder {
+    color: rgba(200, 191, 215, 0.55);
+}
+
+.kx-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(161, 0, 255, 0.22);
+}
+
+input[type="file"].kx-input {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    font-size: 0.85rem;
+}
+
+input[type="file"].kx-input::file-selector-button {
+    margin-right: 0.85rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 0.5rem;
+    background: var(--purple-soft);
+    padding: 0.45rem 0.9rem;
+    color: var(--text-color);
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+input[type="file"].kx-input::file-selector-button:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+textarea.kx-input {
+    min-height: 7rem;
+    resize: vertical;
+}
+
+fieldset {
+    border: none;
+    padding: 5px;
+    margin: 0;
+    margin-bottom: 1.5rem;
+}
+
+#contactFormSection {
+    
+  /*   height: 100% !important; */
+}
+
+/* ===== MODAL DE CONTATO (CSP COMPATÍVEL) ===== */
+#contactFormSection.contact-modal-overlay[hidden] {
+    display: none !important;
+}
+#contactFormSection.contact-modal-overlay:not([hidden]) {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* height: 100% !important; */
+     min-height: 100dvh; 
+    padding: 18px;
+    overflow-y: auto;
+    background: rgba(3, 2, 10, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+#contactFormSection .contact-modal-card {
+    position: relative;
+    box-sizing: border-box;
+    width: min(100%, 560px);
+    max-height: calc(100dvh - 36px);
+    
+    overflow-y: auto;
+    margin: auto;
+    flex-flow: column nowrap;
+}
+#contactFormSection .btnFechar {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid rgba(161, 0, 255, 0.65);
+    border-radius: 9px;
+    color: #fff;
+    background: rgba(105, 0, 219, 0.28);
+    font: inherit;
+    cursor: pointer;
+}
+#contactFormSection .btnFechar:hover, #contactFormSection .btnFechar:focus-visible {
+    background: #6900db;
+    outline: 2px solid rgba(255,255,255,.65);
+    outline-offset: 2px;
+}
+body.contact-modal-open {
+    overflow: hidden;
+}
+@media (max-width: 600px) {
+    #contactFormSection .contact-modal-card {
+        width: 100%;
+        
+        padding: 24px !important;
+    }
+}

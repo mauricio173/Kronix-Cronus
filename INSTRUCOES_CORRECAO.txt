@@ -1,0 +1,39 @@
+KRONIX STORE - RESTAURACAO DA CONFERENCIA E FLUXO DE PAGAMENTO
+
+Arquivos incluídos:
+- server/index.js
+- admin/admin.js
+- js/checkout.js
+- checkout.html
+
+Instalação:
+1. Pare o servidor com Ctrl+C.
+2. Faça backup dos quatro arquivos atuais.
+3. Extraia estes arquivos mantendo a estrutura de pastas, substituindo os existentes.
+4. Não substitua .env, banco SQLite, node_modules ou outros arquivos.
+5. Execute: node --check server/index.js
+6. Execute: node --check admin/admin.js
+7. Execute: node --check js/checkout.js
+8. Inicie: npm start
+
+CONFERÊNCIA DO PRODUTO:
+No painel, em "Vincular produto de fornecedor", clique em "Conferir e aprovar".
+Informe o custo atual do fornecedor em reais e uma observação opcional.
+O status muda para Aprovado. Para reprovar, use "Rejeitar vínculo".
+Editar um vínculo o devolve para Aguardando conferência.
+
+PEDIDO DE TESTE:
+1. Em ambiente local (NODE_ENV diferente de production), crie um pedido marcando o checkbox de teste.
+2. O checkout mostra o QR de teste de R$ 0,01 e um botão "SIMULAR PAGAMENTO APROVADO".
+3. Clique nele para simular o evento de pagamento aprovado. Nenhum dinheiro é transferido.
+4. O pedido muda para "Teste pago · sem compra" e aparece atualizado no painel.
+5. Pedidos de teste não podem ser encaminhados a fornecedores.
+
+PEDIDO REAL:
+O PicPay só confirma automaticamente quando as credenciais válidas estiverem no .env e o webhook estiver configurado em URL HTTPS pública. O checkout consulta o status e mostra a confirmação recebida do webhook.
+Variáveis necessárias: PICPAY_CLIENT_ID, PICPAY_CLIENT_SECRET, PICPAY_WEBHOOK_TOKEN e BASE_URL HTTPS em produção.
+Não compartilhe tokens ou segredos no chat.
+
+COMPRA NO FORNECEDOR:
+Depois que o pagamento real for confirmado, o proprietário abre o produto aprovado no fornecedor, faz a compra manualmente e, no pedido do painel, usa "Registrar compra manual", informa o fornecedor e o número do pedido externo.
+O sistema não compra automaticamente no marketplace.

@@ -1,0 +1,23 @@
+CORRECAO KRONIX STORE - Atual2
+
+Este pacote contém somente o arquivo corrigido server/index.js.
+Não substitui o projeto inteiro e não contém .env, banco SQLite ou node_modules.
+
+INSTALAÇÃO
+1. Pare o servidor no PowerShell com Ctrl+C.
+2. Faça uma cópia de segurança de server/index.js.
+3. Extraia este ZIP na pasta raiz do projeto, mantendo a estrutura de pastas, e permita substituir server/index.js.
+4. No PowerShell, execute: node --check server/index.js
+5. Execute: npm start
+6. Mantenha essa janela aberta.
+7. Abra http://localhost:3000/checkout.html e http://localhost:3000/admin
+
+CORREÇÕES
+- Corrige a variável testMode usada antes de ser declarada no POST /api/orders. Esse erro podia encerrar o processo Node e causar ERR_CONNECTION_RESET / ERR_CONNECTION_REFUSED.
+- Aceita /checkout, /checkout/ e /checkout.html.
+- Aceita /admin e /admin/.
+
+NOTAS
+- O 401 em /api/admin/orders antes do login é esperado: a API exige sessão administrativa. Entre pelo formulário do painel.
+- Se continuar 401 depois de entrar, confira ADMIN_PASSWORD_HASH e SESSION_SECRET no .env e faça login novamente.
+- Não substitua nem compartilhe seu .env ou o banco SQLite.

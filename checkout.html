@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08060d">
+  <meta name="description" content="Solicite seu Cronus Zen na Kronix Store por R$ 1.029,90.">
+  <title>Finalizar pedido | KRONIX STORE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="icon" type="image/png" href="assets/hero-art.jpg">
+  <script  src="js/checkout.js" defer></script>
+  <script  src="server/index.js" defer></script>
+</head>
+
+<body class="checkout-page">
+  <div class="topbar">KRONIX STORE · FINALIZAÇÃO DO PEDIDO</div>
+  <header class="checkout-header">
+    <div class="wrap checkout-nav">
+      <a class="brand" href="/" aria-label="Kronix Store - início"><img src="assets/kronix-logo.png"
+          alt="Kronix Store"></a>
+      <a class="navbtn" href="/">← VOLTAR À LOJA</a>
+    </div>
+  </header>
+  <main class="wrap checkout-wrap">
+    <div class="checkout-heading">
+      <div class="eyebrow">Quase lá</div>
+      <h1>FINALIZE SEU <span class="gradient">PEDIDO.</span></h1>
+      <p>Confira o Cronus Zen e informe seus dados para solicitar o atendimento.</p>
+    </div>
+    <div class="checkout-grid">
+      <section class="checkout-card order-card" aria-labelledby="order-title">
+        <div class="card-title"><span>01</span>
+          <div>
+            <h2 id="order-title">Resumo do pedido</h2>
+            <p>Produto selecionado</p>
+          </div>
+        </div>
+        <div class="order-product">
+          <div class="product-mark">K</div>
+          <div class="order-info"><strong id="product-name">Cronus Zen</strong><small>Cronus Zen · Kronix
+              Store</small><small id="unit-price">R$ 1.029,90</small></div>
+          <strong class="order-price" id="product-price">R$ 1.029,90</strong>
+        </div>
+        <div class="quantity-row"><label for="quantity">Quantidade</label>
+          <div class="quantity-control"><button type="button" id="quantity-minus"
+              aria-label="Diminuir quantidade">−</button><input id="quantity" type="number" min="1" max="5" value="1"
+              inputmode="numeric" aria-label="Quantidade"><button type="button" id="quantity-plus"
+              aria-label="Aumentar quantidade">+</button></div>
+        </div>
+        <div class="price-breakdown" aria-label="Composição do preço">
+          <div class="price-group-title">Valor do produto · Kronix Zen</div>
+          <div class="order-line"><span>Cronus Zen</span><strong id="product-subtotal">R$ 1.029,90</strong></div>
+          <div class="price-group-title">Frete cobrado pelo fornecedor</div>
+          <div class="order-line"><span>Frete internacional</span><strong id="supplier-freight">R$ 69,41</strong></div>
+          <div class="price-group-title government-title">Impostos cobrados pelo governo</div>
+          <div class="order-line"><span>Imposto de Importação (federal · cotação)</span><strong id="import-tax">R$
+              229,25</strong></div>
+          <div class="order-line"><span>ICMS estimado (<span id="icms-rate">17%</span> · estadual)</span><strong
+              id="icms-tax">R$ 185,70</strong></div>
+          <div class="order-line breakdown-subtotal"><span>Subtotal de frete e tributos</span><strong
+              id="charges-subtotal">R$ 484,36</strong></div>
+        </div>
+        <div class="order-total"><span>Total do pedido</span><strong id="total">R$ 1.514,26</strong></div>
+        <p class="secure-note">🔒 O preço do produto é cobrado pela Kronix Zen. Frete e tributos de importação são
+          discriminados separadamente. O ICMS é uma estimativa do Regime de Tributação Simplificada (RTS), calculada
+          pela UF de destino; a cotação final depende do enquadramento e da documentação da importação.</p>
+      </section>
+      <section class="checkout-card form-card">
+        <form id="checkout-form">
+          <div class="card-title"><span>02</span>
+            <div>
+              <h2>Seus dados</h2>
+              <p>Como podemos entrar em contato?</p>
+            </div>
+          </div>
+          <label for="name">Nome completo</label>
+          <input id="name" name="name" autocomplete="name" required maxlength="100"
+            placeholder="Como podemos chamar você?">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" required maxlength="150"
+            placeholder="voce@email.com">
+          <label for="cpf">CPF do titular do pagamento</label>
+          <input id="cpf" name="cpf" inputmode="numeric" autocomplete="off" maxlength="14" placeholder="000.000.000-00">
+          <label for="phone">WhatsApp / celular com DDD</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="25"
+            placeholder="(00) 00000-0000">
+          <label for="platform">Plataforma / dispositivo</label>
+          <select id="platform" name="platform">
+            <option value="">Selecione se aplicável</option>
+            <option>PC</option>
+            <option>PlayStation 5</option>
+            <option>PlayStation 4</option>
+            <option>Xbox</option>
+            <option>Outro / Não se aplica</option>
+          </select>
+          <div class="address-fields">
+            <label for="postalCode">CEP</label><input id="postalCode" name="postalCode" autocomplete="postal-code"
+              inputmode="numeric" required maxlength="9" placeholder="00000-000" aria-describedby="cep-status">
+            <p id="cep-status" class="cep-status" role="status" aria-live="polite">Digite os 8 números do CEP para
+              preencher o endereço automaticamente.</p>
+            <label for="street">Rua / avenida</label><input id="street" name="street" autocomplete="address-line1"
+              required maxlength="150" placeholder="Nome da rua">
+            <label for="streetNumber">Número</label><input id="streetNumber" name="streetNumber" required maxlength="20"
+              placeholder="Número">
+            <label for="complement">Complemento (opcional)</label><input id="complement" name="complement"
+              autocomplete="address-line2" maxlength="80" placeholder="Apto, bloco, referência">
+            <label for="neighborhood">Bairro</label><input id="neighborhood" name="neighborhood" required
+              maxlength="100" placeholder="Bairro">
+            <label for="city">Cidade</label><input id="city" name="city" autocomplete="address-level2" required
+              maxlength="100" placeholder="Cidade">
+            <label for="state">Estado (UF)</label><input id="state" name="state" autocomplete="address-level1" required
+              minlength="2" maxlength="2" placeholder="RS">
+          </div>
+          <label for="notes">Observações (opcional)</label>
+          <textarea id="notes" name="notes" rows="3" maxlength="600"
+            placeholder="Dúvidas ou detalhes sobre seu pedido"></textarea>
+
+<!-- 
+          <label class="check-row"><input type="checkbox" id="terms" required><span>Autorizo o uso destes dados para
+              contato sobre esta solicitação e confirmo que revisei o pedido.</span></label>
+               -->
+
+              <label class="check-row test-payment-option"><input type="checkbox"
+              id="terms" required><span><strong>Autorizo o uso destes dados</strong><small>para
+              contato sobre esta solicitação e confirmo que revisei o pedido.</small></span></label>
+
+          <label class="check-row test-payment-option" id="test-payment-option" hidden style="display: none;"><input type="checkbox"
+              id="test-payment"><span><strong>Ativar teste técnico (R$ 0,01)</strong><small>Somente em ambiente
+                local/desenvolvimento. Gera um pedido de teste de R$ 0,01, sem cobrança
+                comercial.</small></span></label>
+          <button class="btn checkout-submit" id="checkout-submit" type="submit">GERAR PAGAMENTO PIX
+            <span>→</span></button>
+          <section class="payment-result" id="payment-result" hidden aria-live="polite">
+            <h3 id="payment-result-title">Pagamento Pix</h3>
+            <p id="payment-result-text"></p><img id="payment-qr" href="assets/qr-code.png" alt="QR Code Pix para pagamento" /><label
+              for="pix-copy-code">Pix Copia e Cola</label><input id="pix-copy-code" readonly /><button type="button"
+              id="copy-pix-code">COPIAR CÓDIGO</button>
+            <p class="payment-test-warning" id="payment-test-warning" hidden>Modo de simulação: nenhum dinheiro será
+              movimentado. Use o botão abaixo para simular a resposta de pagamento aprovado e testar a atualização
+              automática do pedido.</p><button type="button" id="simulate-test-payment" hidden>SIMULAR PAGAMENTO
+              APROVADO</button>
+            <p id="payment-status" role="status" aria-live="polite"></p>
+            <p id="pix-expiry" class="pix-expiry" hidden></p><a id="checkout-track-link" href="/acompanhar-pedido.html"
+              hidden>ACOMPANHAR ESTE PEDIDO</a><a id="whatsapp-payment-link" class="btn whatsapp-payment-link" href="#"
+              target="_blank" rel="noopener" hidden>FINALIZAR PEDIDO PELO WHATSAPP</a>
+          </section>
+          <p class="form-footnote" id="price-warning" role="status">O valor cobrado será gerado pelo servidor e enviado
+            ao gateway Pix. O pedido só será liberado após confirmação do pagamento.</p>
+          <div class="success-message" id="success-message" role="status" aria-live="polite" hidden></div>
+        </form>
+      </section>
+    </div>
+    <p class="checkout-back"><a href="/">← Continuar navegando na KRONIX STORE</a></p>
+  </main>
+  <footer>
+    <div class="wrap foot">
+      <div>© <span id="year">2026</span> KRONIX STORE. Todos os direitos reservados.</div>
+      <div><a href="/politicas.html">Privacidade, trocas e atendimento</a> · Solicitação sujeita à confirmação de
+        disponibilidade, envio e pagamento.</div>
+    </div>
+  </footer>
+  <p class="checkout-track-link" style="text-align:center;margin:18px auto"><a href="./acompanhar-pedido.html">Já fez
+      uma compra? Acompanhe seu pedido</a></p>
+</body>
+
+</html>

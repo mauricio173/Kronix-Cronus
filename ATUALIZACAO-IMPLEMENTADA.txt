@@ -1,0 +1,18 @@
+ATUALIZAÇÃO KRONIX STORE
+
+Alterações:
+- Campo "Pedido feito na loja" (Sim/Não) em cada pedido no painel administrativo.
+- O código de rastreio só pode ser salvo quando "Pedido feito" estiver como Sim.
+- Código de rastreio editável diretamente no cartão do pedido.
+- Previsão de entrega com calendário (input date) e botão para salvar.
+- Migração automática da coluna store_order_placed no SQLite; pedidos já registrados/enviados/entregues são marcados como feitos.
+- Quando CPF ou celular não atendem à validação do PicPay, o servidor cria o pedido com estado payment_setup_error e encaminha o cliente ao WhatsApp +5551983312299 com o código do pedido e e-mail da compra.
+
+INSTALAÇÃO:
+1. Faça uma cópia de segurança do projeto atual e do banco SQLite.
+2. Extraia este ZIP sobre a pasta do projeto, substituindo os arquivos.
+3. Preserve seu arquivo .env atual (ele não é incluído neste pacote por segurança).
+4. Execute npm install, se necessário.
+5. Inicie com npm start. A coluna nova é criada automaticamente na inicialização.
+
+Observação: node --check foi executado nos arquivos JavaScript alterados. A suíte automatizada não pôde ser executada neste ambiente porque as dependências nativas (better-sqlite3) não estavam instaladas no ambiente de validação.

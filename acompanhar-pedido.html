@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Acompanhar pedido | Kronix Store</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/png" href="assets/hero-art.jpg">
+  <style>
+    .track-wrap{max-width:720px;margin:8vh auto;padding:24px}
+    .track-card{background:#11131d;border:1px solid #303346;border-radius:18px;padding:28px;color:#fff}
+    .track-card h1{margin-top:0}.track-form{display:grid;gap:14px}.track-form label{display:grid;gap:6px}
+    .track-form input{padding:13px;border-radius:8px;border:1px solid #45495c;background:#080a11;color:#fff}
+    .track-form button{padding:14px;border:0;border-radius:8px;background:#8b5cf6;color:#fff;font-weight:700;cursor:pointer}
+    .track-result{margin-top:20px;line-height:1.8}.track-result h2{margin:18px 0 8px;color:#d9c2ff}.track-result h3{margin:22px 0 8px;color:#fff}.track-result section{margin-top:20px;padding-top:14px;border-top:1px solid #303346}.track-result section p{padding:8px 10px;margin:6px 0;border-left:2px solid #8b5cf6;background:#171522;border-radius:0 7px 7px 0}.muted{color:#aeb3c7}
+  </style>
+</head>
+<body>
+  <main class="track-wrap"><section class="track-card">
+    <p class="muted">KRONIX STORE</p><h1>Acompanhe seu pedido</h1>
+    <p class="muted">Informe o código do pedido e o e-mail utilizado na compra.</p>
+    <form id="track-form" class="track-form">
+      <label>Código do pedido<input id="code" required autocomplete="off"></label>
+      <label>E-mail da compra<input id="email" type="email" required autocomplete="email"></label>
+      <button>CONSULTAR PEDIDO</button>
+    </form>
+    <div id="result" class="track-result" role="status" aria-live="polite"></div>
+    <p><a href="/">Voltar à loja</a></p>
+  </section></main>
+  <script src="/js/tracking.js" defer></script>
+</body>
+</html>

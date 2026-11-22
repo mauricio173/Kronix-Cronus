@@ -1,0 +1,1 @@
+require('dotenv').config(); const backups=require('./backup'); backups.createBackup('manual-cli').then(r=>{console.log('Backup criado:',r.fileName);process.exit(0)}).catch(e=>{console.error(e);process.exit(1)});
